@@ -30,3 +30,35 @@ C:\Users\MatthewCollier\source\repos\Vista File Mover\obj\Debug\Vista File Mover
 C:\Users\MatthewCollier\source\repos\Vista File Mover\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\MatthewCollier\source\repos\Vista File Mover\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
 C:\Users\MatthewCollier\source\repos\Vista File Mover\obj\Debug\Vista_File_Mover.FileMoverForm.resources
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Vista File Mover.exe.config
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Vista File Mover.exe
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Vista File Mover.pdb
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Buffers.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Memory.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Text.Json.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.ValueTuple.dll
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Buffers.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Memory.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Text.Json.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\System.ValueTuple.xml
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.csproj.AssemblyReference.cache
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.csproj.SuggestedBindingRedirects.cache
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista_File_Mover.FileMoverForm.resources
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista_File_Mover.Properties.Resources.resources
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.csproj.GenerateResource.cache
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.csproj.CoreCompileInputs.cache
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.csproj.CopyComplete
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.exe
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.pdb

@@ -7,19 +7,22 @@ using System.Threading.Tasks;
 
 namespace Vista_File_Mover
 {
+    #region Filter Class
     public class Filter
     {
-        public string[] filterStyles { get; private set; } = { "Contains", "Not Contains", "Extension"};
+        public static string[] filterStyles { get; private set; } = { "Contains", "Not Contains", "Extension"};
 
         public string filterSource { get; set; } = "Filename";
-        public string filterStyle { get; set; }
+        public string filterStyle { get; set; } = filterStyles[0];
         public string filterKey { get; set; }
 
         public Filter() 
         {
         }
     }
-    
+    #endregion
+
+    #region FileTransfer Class
     public class FileTransfer
     {
         //Transfer name
@@ -52,4 +55,5 @@ namespace Vista_File_Mover
             this.transferEnabled = enabled;
         }
     }
+    #endregion
 }
