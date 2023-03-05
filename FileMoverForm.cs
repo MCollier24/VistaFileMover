@@ -80,7 +80,7 @@ namespace Vista_File_Mover
 
         private void dgvFileTransfers_SelectionChanged(object sender, EventArgs e)
         {
-            // If selection is valid updated selected transfer and display new settings
+            // If selection is valid update selected transfer and display new settings
             if (dgvFileTransfers.SelectedRows.Count == 1)
             {
                 //Show current transfer settings and enable controls
@@ -90,6 +90,7 @@ namespace Vista_File_Mover
             }
             else
             {
+                //Clear selected transfer and disable controls
                 selectedTransfer = null;
                 tlpTransferSettings.Enabled = false;
                 clearTransferSettings();
@@ -157,6 +158,7 @@ namespace Vista_File_Mover
 
             dgvCopyFilters.DataBindings.Clear();
             dgvCopyFilters.Columns.Clear();
+            
             dgvGroupFilters.DataBindings.Clear();
             dgvGroupFilters.Columns.Clear();
         }
@@ -219,7 +221,7 @@ namespace Vista_File_Mover
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Load the cached JSON file (will skip if file doesn't exist)
+            //Load the cached JSON file
             loadTransfer(Directory.GetCurrentDirectory() + "\\previous.json");
 
             //Intialize file transfer datagrid
