@@ -31,6 +31,8 @@ C:\Users\MatthewCollier\source\repos\Vista File Mover\bin\Debug\Microsoft.Extens
 C:\Users\MatthewCollier\source\repos\Vista File Mover\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
 C:\Users\MatthewCollier\source\repos\Vista File Mover\obj\Debug\Vista_File_Mover.FileMoverForm.resources
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Vista File Mover.exe.config
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Vista File Mover.exe.manifest
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Vista File Mover.application
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Vista File Mover.exe
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Vista File Mover.pdb
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
@@ -59,6 +61,8 @@ C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista_
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista_File_Mover.Properties.Resources.resources
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.csproj.GenerateResource.cache
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.csproj.CoreCompileInputs.cache
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.exe.manifest
+C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.application
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.csproj.CopyComplete
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.exe
 C:\Users\MatthewCollier\Documents\Personal Items\VistaFileMover\obj\Debug\Vista File Mover.pdb

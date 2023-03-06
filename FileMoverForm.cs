@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.FileSystemGlobbing;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -29,7 +28,7 @@ namespace Vista_File_Mover
         }
 
         #region Form Opening/Closing
-        private void Form1_Load(object sender, EventArgs e)
+        private void FileMoverForm_Load(object sender, EventArgs e)
         {
             //Load the cached JSON file
             loadTransfer(Directory.GetCurrentDirectory() + "\\previous.json");
@@ -58,7 +57,7 @@ namespace Vista_File_Mover
             folderBrowserDialog.Filter = "Folders|n";
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        private void FileMoverForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Save the current transfer to a JSON file
             saveTransfer(Directory.GetCurrentDirectory() + "\\previous.json");
@@ -281,7 +280,7 @@ namespace Vista_File_Mover
 
         #region CopyFiles Method
         private void copyFiles(IEnumerable<FileTransfer> transfers, DateTime startDate, DateTime endDate, BackgroundWorker worker, DoWorkEventArgs e)
-        {
+        {  
             //Loop through file transfers
             foreach (FileTransfer transfer in transfers)
             {

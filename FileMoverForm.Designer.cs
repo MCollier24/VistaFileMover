@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileMoverForm));
             this.applicationMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -526,12 +527,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tlpMainWindow);
             this.Controls.Add(this.applicationMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.applicationMenuStrip;
             this.Name = "FileMoverForm";
             this.Text = "Vista File Mover";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FileMoverForm_FormClosing);
+            this.Load += new System.EventHandler(this.FileMoverForm_Load);
             this.applicationMenuStrip.ResumeLayout(false);
             this.applicationMenuStrip.PerformLayout();
             this.gbFileTransfers.ResumeLayout(false);

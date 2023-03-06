@@ -33,7 +33,7 @@
   },
   {
     "transferName": "EB300CAM2",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.114\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB300CAM2\\",
     "groupFilters": [],
@@ -41,7 +41,7 @@
   },
   {
     "transferName": "EB330CAM1",
-    "transferEnabled": false,
+    "transferEnabled": true,
     "source": "\\\\120.13.167.97\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB330CAM1\\",
     "groupFilters": [],
