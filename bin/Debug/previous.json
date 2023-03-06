@@ -1,7 +1,7 @@
 [
   {
     "transferName": "EB040CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.46\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB040CAM1\\",
     "groupFilters": [],
@@ -41,7 +41,7 @@
   },
   {
     "transferName": "EB330CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.97\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB330CAM1\\",
     "groupFilters": [],
@@ -49,7 +49,7 @@
   },
   {
     "transferName": "EB346CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.118\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB346CAM1\\",
     "groupFilters": [],
@@ -60,23 +60,12 @@
     "transferEnabled": true,
     "source": "\\\\120.13.167.115\\SavedImages\\",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB349CAM1\\",
-    "groupFilters": [
-      {
-        "filterSource": "Filename",
-        "filterStyle": "Contains",
-        "filterKey": "CAM1"
-      },
-      {
-        "filterSource": "Filename",
-        "filterStyle": "Contains",
-        "filterKey": "CAM2"
-      }
-    ],
+    "groupFilters": [],
     "copyFilters": []
   },
   {
     "transferName": "EB349CAM2",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.105\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB349CAM2\\",
     "groupFilters": [],
@@ -84,7 +73,7 @@
   },
   {
     "transferName": "EB358CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.108\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB358CAM1\\",
     "groupFilters": [],
@@ -92,7 +81,7 @@
   },
   {
     "transferName": "EB358CAM2",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.109\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB358CAM2\\",
     "groupFilters": [],
@@ -100,7 +89,7 @@
   },
   {
     "transferName": "EB410CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.84\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB410CAM1\\",
     "groupFilters": [],
@@ -156,7 +145,7 @@
   },
   {
     "transferName": "EB460CAM5",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.95\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB460CAM5\\",
     "groupFilters": [],
@@ -164,7 +153,7 @@
   },
   {
     "transferName": "EB470CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.83\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB470CAM1\\",
     "groupFilters": [],
@@ -172,7 +161,7 @@
   },
   {
     "transferName": "EB500CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.96\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB500CAM1\\",
     "groupFilters": [],

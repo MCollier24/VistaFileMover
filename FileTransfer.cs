@@ -19,6 +19,28 @@ namespace Vista_File_Mover
         public Filter() 
         {
         }
+
+        public Boolean apply(string file)
+        {
+            if (filterSource == "Filename")
+            {
+                switch (filterStyle)
+                {
+                    case "Contains":
+                        return file.ToLower().Contains(filterKey.ToLower());
+                    case "Not Contains":
+                        return !file.ToLower().Contains(filterKey.ToLower());
+                    case "Extension":
+                        return file.ToLower().EndsWith(filterKey.ToLower());
+                    default:
+                        return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
     #endregion
 
