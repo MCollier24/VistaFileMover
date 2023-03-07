@@ -4,7 +4,7 @@
   <description asmv2:iconFile="vista_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Vista File Mover" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Vista File Mover" version="1.0.0.0" publicKeyToken="4232C9FA588ABD1E" language="neutral" processorArchitecture="msil" />
     <commandLine file="Vista File Mover.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -163,14 +163,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vista File Mover.exe" size="114152">
-      <assemblyIdentity name="Vista File Mover" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vista File Mover.exe" size="114664">
+      <assemblyIdentity name="Vista File Mover" version="1.0.0.0" publicKeyToken="4232C9FA588ABD1E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WPZGttiFpVWVtK7TafUXczDjAZ2sBHYLWx6ckP3HTcc=</dsig:DigestValue>
+        <dsig:DigestValue>ZhwLuc2BCdZh1/lM0nY6MnNiytom2twbcOgnn196pb4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
