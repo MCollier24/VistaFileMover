@@ -163,14 +163,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vista File Mover.exe" size="114664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vista File Mover.exe" size="115688">
       <assemblyIdentity name="Vista File Mover" version="1.0.0.0" publicKeyToken="4232C9FA588ABD1E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZhwLuc2BCdZh1/lM0nY6MnNiytom2twbcOgnn196pb4=</dsig:DigestValue>
+        <dsig:DigestValue>YzL2fh136/LMPsrYAPLb1uU7XoAG+54czmqInmDmg6w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -152,7 +152,6 @@
             this.dgvFileTransfers.AllowUserToResizeRows = false;
             this.dgvFileTransfers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvFileTransfers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFileTransfers.ContextMenuStrip = this.transferContextMenuStrip;
             this.dgvFileTransfers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvFileTransfers.Location = new System.Drawing.Point(3, 18);
             this.dgvFileTransfers.MultiSelect = false;
@@ -165,6 +164,7 @@
             this.dgvFileTransfers.TabIndex = 2;
             this.dgvFileTransfers.SelectionChanged += new System.EventHandler(this.dgvFileTransfers_SelectionChanged);
             this.dgvFileTransfers.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvFileTransfers_UserDeletedRow);
+            this.dgvFileTransfers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvFileTransfers_MouseClick);
             // 
             // transferContextMenuStrip
             // 
@@ -174,18 +174,21 @@
             this.pasteToolStripMenuItem});
             this.transferContextMenuStrip.Name = "contextMenuStrip1";
             this.transferContextMenuStrip.Size = new System.Drawing.Size(113, 52);
+            this.transferContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.transferContextMenuStrip_Opening);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.pasteToolStripMenuItem.Text = "Paste";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // btnAddSource
             // 
@@ -528,12 +531,14 @@
             this.Controls.Add(this.tlpMainWindow);
             this.Controls.Add(this.applicationMenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.applicationMenuStrip;
             this.Name = "FileMoverForm";
             this.Text = "Vista File Mover";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FileMoverForm_FormClosing);
             this.Load += new System.EventHandler(this.FileMoverForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FileMoverForm_KeyDown);
             this.applicationMenuStrip.ResumeLayout(false);
             this.applicationMenuStrip.PerformLayout();
             this.gbFileTransfers.ResumeLayout(false);

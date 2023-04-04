@@ -12,7 +12,7 @@ namespace Vista_File_Mover
     {
         //FileTransfer list and selected FileTransfer object
         BindingList<FileTransfer> fileTransfers = new BindingList<FileTransfer>();
-        FileTransfer selectedTransfer;
+        FileTransfer selectedTransfer, copiedTransfer;
 
         //Filter and grouping data grid columns
         DataGridViewTextBoxColumn copyFilterSource = new DataGridViewTextBoxColumn();
@@ -105,6 +105,26 @@ namespace Vista_File_Mover
                 tlpTransferSettings.Enabled = false;
                 clearTransferSettings();
             }
+        }
+
+        private void dgvFileTransfers_MouseClick(object sender, MouseEventArgs e)
+        {
+            //Select row by right-click
+            if (e.Button != MouseButtons.Right)
+                return;
+
+            DataGridView dgv = (DataGridView)sender;
+
+            dgv.ClearSelection();
+
+            int rowIndex = dgv.HitTest(e.X, e.Y).RowIndex;
+
+            if (rowIndex != -1)
+            {
+                dgv.Rows[rowIndex].Selected = true;
+            }
+
+            transferContextMenuStrip.Show(Cursor.Position);
         }
         #endregion
 
@@ -479,6 +499,69 @@ namespace Vista_File_Mover
                 this.transfers = transfers;
                 this.startDate = startDate;
                 this.endDate = endDate;
+            }
+        }
+        #endregion
+
+        #region Copy/Paste Transfers
+
+        private void copySelectedTransfer()
+        {
+            copiedTransfer = selectedTransfer;
+        }
+
+        private void pasteTransfer()
+        {
+            if (copiedTransfer != null)
+            {
+                fileTransfers.Add(copiedTransfer);
+                log("File Transfer Pasted!");
+            }
+        }
+        #endregion
+
+        #region FileTransfer Context Menu
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            copySelectedTransfer();
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pasteTransfer();
+        }
+
+        private void transferContextMenuStrip_Opening(object sender, CancelEventArgs e)
+        {
+            //Disable copy/paste unless items are selected/copied
+            transferContextMenuStrip.Items[0].Enabled = false;
+            transferContextMenuStrip.Items[1].Enabled = false;
+
+            if(selectedTransfer != null)
+                transferContextMenuStrip.Items[0].Enabled = true;
+
+            if (copiedTransfer != null)
+                transferContextMenuStrip.Items[1].Enabled = true;
+        }
+        #endregion
+
+        #region Form Key Events
+        private void FileMoverForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Check for Ctrl+C
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                if (selectedTransfer != null)
+                {
+                    copySelectedTransfer();
+                }
+            }
+
+            //Check for Ctrl+V
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                pasteTransfer();
             }
         }
         #endregion
