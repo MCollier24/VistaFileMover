@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Vista_File_Mover
 {
@@ -548,22 +549,48 @@ namespace Vista_File_Mover
 
         #region Form Key Events
         private void FileMoverForm_KeyDown(object sender, KeyEventArgs e)
-        {
+        { 
             //Check for Ctrl+C
             if (e.Control && e.KeyCode == Keys.C)
             {
-                if (selectedTransfer != null)
-                {
+                if (selectedTransfer != null && ActiveControl == dgvFileTransfers)
                     copySelectedTransfer();
-                }
             }
 
             //Check for Ctrl+V
             if (e.Control && e.KeyCode == Keys.V)
             {
-                pasteTransfer();
+                if (ActiveControl == dgvFileTransfers)
+                    pasteTransfer();
             }
         }
         #endregion
+
+        bool dgvMouseDown;
+
+        private void dgvFileTransfers_MouseDown(object sender, MouseEventArgs e)
+        {
+            dgvMouseDown = (e.Button == MouseButtons.Left);
+        }
+
+        private void dgvFileTransfers_MouseUp(object sender, MouseEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+
+            if (e.Button == MouseButtons.Left && dgvMouseDown)
+            {
+                dgvMouseDown = false;
+
+                int rowIndex = dgv.HitTest(e.X, e.Y).RowIndex;
+                fileTransfers.IndexOf(selectedTransfer);
+                fileTransfers.Remove(selectedTransfer);
+                fileTransfers.Insert(rowIndex, selectedTransfer);
+            }
+        }
+
+        private void dgvFileTransfers_DragOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
     }
 }
