@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -274,7 +276,7 @@ namespace Vista_File_Mover
         #region Logging
         public void log(string text)
         {
-            tbTransferLog.AppendText(text + Environment.NewLine);
+            tbTransferLog.AppendText(DateTime.Now.ToLongTimeString() + text + Environment.NewLine);
         }
         #endregion
 
@@ -313,7 +315,7 @@ namespace Vista_File_Mover
                     return;
                 }
 
-                worker.ReportProgress(0, transfer.transferName + ": Transfer Started");
+                worker.ReportProgress(0, transfer.transferName + " - Transfer Started");
 
                 DirectoryInfo sourceDirectory = new DirectoryInfo(transfer.source);
                 DirectoryInfo destinationDirectory = new DirectoryInfo(transfer.destination);
@@ -321,12 +323,12 @@ namespace Vista_File_Mover
                 //Check that source and destination exist
                 if (!sourceDirectory.Exists)
                 {
-                    worker.ReportProgress(0, transfer.transferName + ": Unable to access source directory!");
+                    worker.ReportProgress(0, transfer.transferName + " - Unable to access source directory!");
                     continue;
                 }
                 if (!destinationDirectory.Exists)
                 {
-                    worker.ReportProgress(0, transfer.transferName + ": Unable to access destination directory!");
+                    worker.ReportProgress(0, transfer.transferName + " - Unable to access destination directory!");
                     continue;
                 }
 
@@ -335,8 +337,7 @@ namespace Vista_File_Mover
                                                                 .Where(x => x.LastWriteTime.Date >= startDate.Date && x.LastWriteTime.Date <= endDate.Date)
                                                                 .Select(f => f.FullName);
 
-                //int fileCount = fileList.Count();
-                int fileCount = 999;
+                int fileCount = fileList.Count();
                 int filesChecked = 0;
 
                 foreach (String file in fileList)
@@ -364,7 +365,7 @@ namespace Vista_File_Mover
                             passFilter = false;
                     }
 
-                    //If copy filters passed then copy into date and/or group folder
+                    //If copy filters passed then copy into grouped destination folder
                     if (passFilter)
                     {
                         string currentDatePath;
@@ -396,13 +397,12 @@ namespace Vista_File_Mover
                         {
                             Directory.CreateDirectory(currentDatePath);
                             if (!File.Exists(currentDatePath + "\\" + filename))
-                                worker.ReportProgress(0, "Copying: " + file + " to: " + currentDatePath + "\\" + filename);
                                 File.Copy(file, currentDatePath + "\\" + filename);
                         }
                     }
                     worker.ReportProgress(++filesChecked * 100 / fileCount);
                 }
-                worker.ReportProgress(100, transfer.transferName + ": Transfer Complete.");
+                worker.ReportProgress(100, transfer.transferName + " - Transfer Complete.");
             }
         }
         #endregion

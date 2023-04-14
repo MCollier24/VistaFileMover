@@ -225,6 +225,7 @@
             this.pbFileTransfer.Location = new System.Drawing.Point(0, 0);
             this.pbFileTransfer.Name = "pbFileTransfer";
             this.pbFileTransfer.Size = new System.Drawing.Size(697, 37);
+            this.pbFileTransfer.Step = 1;
             this.pbFileTransfer.TabIndex = 1;
             // 
             // btnStartTransfer
