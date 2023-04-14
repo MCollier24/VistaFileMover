@@ -58,13 +58,6 @@
             this.gbItemFilters = new System.Windows.Forms.GroupBox();
             this.dgvGroupFilters = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tbTransferLog = new System.Windows.Forms.TextBox();
-            this.tlpMainWindow = new System.Windows.Forms.TableLayoutPanel();
-            this.folderBrowserDialog = new System.Windows.Forms.OpenFileDialog();
-            this.openTransferFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveTransferFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.fileTransferWorker = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbEndDate = new System.Windows.Forms.GroupBox();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
@@ -73,6 +66,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cbGroupByDate = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tbTransferLog = new System.Windows.Forms.TextBox();
+            this.tlpMainWindow = new System.Windows.Forms.TableLayoutPanel();
+            this.folderBrowserDialog = new System.Windows.Forms.OpenFileDialog();
+            this.openTransferFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveTransferFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.fileTransferWorker = new System.ComponentModel.BackgroundWorker();
             this.applicationMenuStrip.SuspendLayout();
             this.gbFileTransfers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFileTransfers)).BeginInit();
@@ -88,13 +88,13 @@
             this.gbItemFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupFilters)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.tlpMainWindow.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbEndDate.SuspendLayout();
             this.gbStartDate.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tlpMainWindow.SuspendLayout();
             this.SuspendLayout();
             // 
             // applicationMenuStrip
@@ -104,7 +104,7 @@
             this.fileToolStripMenuItem});
             this.applicationMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.applicationMenuStrip.Name = "applicationMenuStrip";
-            this.applicationMenuStrip.Size = new System.Drawing.Size(800, 30);
+            this.applicationMenuStrip.Size = new System.Drawing.Size(800, 28);
             this.applicationMenuStrip.TabIndex = 1;
             this.applicationMenuStrip.Text = "menuStrip1";
             // 
@@ -115,7 +115,7 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -147,7 +147,7 @@
             this.gbFileTransfers.Location = new System.Drawing.Point(3, 3);
             this.gbFileTransfers.Name = "gbFileTransfers";
             this.gbFileTransfers.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gbFileTransfers.Size = new System.Drawing.Size(194, 371);
+            this.gbFileTransfers.Size = new System.Drawing.Size(194, 373);
             this.gbFileTransfers.TabIndex = 1;
             this.gbFileTransfers.TabStop = false;
             this.gbFileTransfers.Text = "Transfer Sources";
@@ -167,19 +167,16 @@
             this.dgvFileTransfers.RowHeadersWidth = 51;
             this.dgvFileTransfers.RowTemplate.Height = 24;
             this.dgvFileTransfers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFileTransfers.Size = new System.Drawing.Size(188, 320);
+            this.dgvFileTransfers.Size = new System.Drawing.Size(188, 322);
             this.dgvFileTransfers.TabIndex = 2;
             this.dgvFileTransfers.SelectionChanged += new System.EventHandler(this.dgvFileTransfers_SelectionChanged);
             this.dgvFileTransfers.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvFileTransfers_UserDeletedRow);
-            this.dgvFileTransfers.DragOver += new System.Windows.Forms.DragEventHandler(this.dgvFileTransfers_DragOver);
             this.dgvFileTransfers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvFileTransfers_MouseClick);
-            this.dgvFileTransfers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvFileTransfers_MouseDown);
-            this.dgvFileTransfers.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgvFileTransfers_MouseUp);
             // 
             // btnAddSource
             // 
             this.btnAddSource.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAddSource.Location = new System.Drawing.Point(3, 338);
+            this.btnAddSource.Location = new System.Drawing.Point(3, 340);
             this.btnAddSource.Name = "btnAddSource";
             this.btnAddSource.Size = new System.Drawing.Size(188, 30);
             this.btnAddSource.TabIndex = 1;
@@ -217,7 +214,7 @@
             this.panelProgressBar.Controls.Add(this.pbFileTransfer);
             this.panelProgressBar.Controls.Add(this.btnStartTransfer);
             this.panelProgressBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelProgressBar.Location = new System.Drawing.Point(3, 380);
+            this.panelProgressBar.Location = new System.Drawing.Point(3, 382);
             this.panelProgressBar.Name = "panelProgressBar";
             this.panelProgressBar.Size = new System.Drawing.Size(794, 37);
             this.panelProgressBar.TabIndex = 0;
@@ -256,7 +253,7 @@
             this.tlpSettings.RowCount = 2;
             this.tlpSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpSettings.Size = new System.Drawing.Size(594, 371);
+            this.tlpSettings.Size = new System.Drawing.Size(594, 373);
             this.tlpSettings.TabIndex = 2;
             // 
             // gbTransferSettings
@@ -266,7 +263,7 @@
             this.gbTransferSettings.Location = new System.Drawing.Point(3, 3);
             this.gbTransferSettings.Name = "gbTransferSettings";
             this.tlpSettings.SetRowSpan(this.gbTransferSettings, 2);
-            this.gbTransferSettings.Size = new System.Drawing.Size(291, 365);
+            this.gbTransferSettings.Size = new System.Drawing.Size(291, 367);
             this.gbTransferSettings.TabIndex = 0;
             this.gbTransferSettings.TabStop = false;
             this.gbTransferSettings.Text = "Transfer Settings";
@@ -288,7 +285,7 @@
             this.tlpTransferSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpTransferSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpTransferSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpTransferSettings.Size = new System.Drawing.Size(285, 344);
+            this.tlpTransferSettings.Size = new System.Drawing.Size(285, 346);
             this.tlpTransferSettings.TabIndex = 0;
             // 
             // gbTransferSource
@@ -366,7 +363,7 @@
             this.gbNameFilters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbNameFilters.Location = new System.Drawing.Point(3, 146);
             this.gbNameFilters.Name = "gbNameFilters";
-            this.gbNameFilters.Size = new System.Drawing.Size(279, 94);
+            this.gbNameFilters.Size = new System.Drawing.Size(279, 95);
             this.gbNameFilters.TabIndex = 2;
             this.gbNameFilters.TabStop = false;
             this.gbNameFilters.Text = "Copy Filters";
@@ -383,16 +380,16 @@
             this.dgvCopyFilters.RowHeadersWidth = 51;
             this.dgvCopyFilters.RowTemplate.Height = 24;
             this.dgvCopyFilters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCopyFilters.Size = new System.Drawing.Size(273, 73);
+            this.dgvCopyFilters.Size = new System.Drawing.Size(273, 74);
             this.dgvCopyFilters.TabIndex = 0;
             // 
             // gbItemFilters
             // 
             this.gbItemFilters.Controls.Add(this.dgvGroupFilters);
             this.gbItemFilters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbItemFilters.Location = new System.Drawing.Point(3, 246);
+            this.gbItemFilters.Location = new System.Drawing.Point(3, 247);
             this.gbItemFilters.Name = "gbItemFilters";
-            this.gbItemFilters.Size = new System.Drawing.Size(279, 95);
+            this.gbItemFilters.Size = new System.Drawing.Size(279, 96);
             this.gbItemFilters.TabIndex = 3;
             this.gbItemFilters.TabStop = false;
             this.gbItemFilters.Text = "Grouping Filters";
@@ -409,7 +406,7 @@
             this.dgvGroupFilters.RowHeadersWidth = 51;
             this.dgvGroupFilters.RowTemplate.Height = 24;
             this.dgvGroupFilters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGroupFilters.Size = new System.Drawing.Size(273, 74);
+            this.dgvGroupFilters.Size = new System.Drawing.Size(273, 75);
             this.dgvGroupFilters.TabIndex = 1;
             // 
             // groupBox2
@@ -418,75 +415,10 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(300, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(291, 179);
+            this.groupBox2.Size = new System.Drawing.Size(291, 180);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Global Settings";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.tbTransferLog);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(300, 188);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(291, 180);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Log";
-            // 
-            // tbTransferLog
-            // 
-            this.tbTransferLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbTransferLog.Location = new System.Drawing.Point(3, 18);
-            this.tbTransferLog.Multiline = true;
-            this.tbTransferLog.Name = "tbTransferLog";
-            this.tbTransferLog.ReadOnly = true;
-            this.tbTransferLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbTransferLog.Size = new System.Drawing.Size(285, 159);
-            this.tbTransferLog.TabIndex = 0;
-            // 
-            // tlpMainWindow
-            // 
-            this.tlpMainWindow.ColumnCount = 2;
-            this.tlpMainWindow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpMainWindow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tlpMainWindow.Controls.Add(this.tlpSettings, 1, 0);
-            this.tlpMainWindow.Controls.Add(this.panelProgressBar, 0, 1);
-            this.tlpMainWindow.Controls.Add(this.gbFileTransfers, 0, 0);
-            this.tlpMainWindow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpMainWindow.Location = new System.Drawing.Point(0, 30);
-            this.tlpMainWindow.Name = "tlpMainWindow";
-            this.tlpMainWindow.RowCount = 2;
-            this.tlpMainWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMainWindow.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpMainWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpMainWindow.Size = new System.Drawing.Size(800, 420);
-            this.tlpMainWindow.TabIndex = 2;
-            // 
-            // folderBrowserDialog
-            // 
-            this.folderBrowserDialog.FileName = "openFileDialog1";
-            // 
-            // openTransferFileDialog
-            // 
-            this.openTransferFileDialog.DefaultExt = "json";
-            this.openTransferFileDialog.FileName = "openFileDialog2";
-            this.openTransferFileDialog.Filter = "JSON Files|*.json";
-            this.openTransferFileDialog.Title = "Select Transfer JSON File";
-            // 
-            // saveTransferFileDialog
-            // 
-            this.saveTransferFileDialog.DefaultExt = "json";
-            this.saveTransferFileDialog.Filter = "JSON Files|*.json";
-            this.saveTransferFileDialog.Title = "Save Current Transfer";
-            // 
-            // fileTransferWorker
-            // 
-            this.fileTransferWorker.WorkerReportsProgress = true;
-            this.fileTransferWorker.WorkerSupportsCancellation = true;
-            this.fileTransferWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.fileTransferWorker_DoWork);
-            this.fileTransferWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.fileTransferWorker_ProgressChanged);
-            this.fileTransferWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.fileTransferWorker_RunWorkerCompleted);
             // 
             // tableLayoutPanel1
             // 
@@ -502,7 +434,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(285, 158);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(285, 159);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // gbEndDate
@@ -553,7 +485,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 42);
+            this.groupBox1.Size = new System.Drawing.Size(279, 43);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Other";
@@ -564,18 +496,85 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(273, 21);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(273, 22);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // cbGroupByDate
             // 
             this.cbGroupByDate.AutoSize = true;
+            this.cbGroupByDate.Checked = true;
+            this.cbGroupByDate.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbGroupByDate.Location = new System.Drawing.Point(3, 3);
             this.cbGroupByDate.Name = "cbGroupByDate";
             this.cbGroupByDate.Size = new System.Drawing.Size(116, 20);
             this.cbGroupByDate.TabIndex = 0;
             this.cbGroupByDate.Text = "Group by Date";
             this.cbGroupByDate.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tbTransferLog);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(300, 189);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(291, 181);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Log";
+            // 
+            // tbTransferLog
+            // 
+            this.tbTransferLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbTransferLog.Location = new System.Drawing.Point(3, 18);
+            this.tbTransferLog.Multiline = true;
+            this.tbTransferLog.Name = "tbTransferLog";
+            this.tbTransferLog.ReadOnly = true;
+            this.tbTransferLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbTransferLog.Size = new System.Drawing.Size(285, 160);
+            this.tbTransferLog.TabIndex = 0;
+            // 
+            // tlpMainWindow
+            // 
+            this.tlpMainWindow.ColumnCount = 2;
+            this.tlpMainWindow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpMainWindow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tlpMainWindow.Controls.Add(this.tlpSettings, 1, 0);
+            this.tlpMainWindow.Controls.Add(this.panelProgressBar, 0, 1);
+            this.tlpMainWindow.Controls.Add(this.gbFileTransfers, 0, 0);
+            this.tlpMainWindow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMainWindow.Location = new System.Drawing.Point(0, 28);
+            this.tlpMainWindow.Name = "tlpMainWindow";
+            this.tlpMainWindow.RowCount = 2;
+            this.tlpMainWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpMainWindow.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpMainWindow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpMainWindow.Size = new System.Drawing.Size(800, 422);
+            this.tlpMainWindow.TabIndex = 2;
+            // 
+            // folderBrowserDialog
+            // 
+            this.folderBrowserDialog.FileName = "openFileDialog1";
+            // 
+            // openTransferFileDialog
+            // 
+            this.openTransferFileDialog.DefaultExt = "json";
+            this.openTransferFileDialog.FileName = "openFileDialog2";
+            this.openTransferFileDialog.Filter = "JSON Files|*.json";
+            this.openTransferFileDialog.Title = "Select Transfer JSON File";
+            // 
+            // saveTransferFileDialog
+            // 
+            this.saveTransferFileDialog.DefaultExt = "json";
+            this.saveTransferFileDialog.Filter = "JSON Files|*.json";
+            this.saveTransferFileDialog.Title = "Save Current Transfer";
+            // 
+            // fileTransferWorker
+            // 
+            this.fileTransferWorker.WorkerReportsProgress = true;
+            this.fileTransferWorker.WorkerSupportsCancellation = true;
+            this.fileTransferWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.fileTransferWorker_DoWork);
+            this.fileTransferWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.fileTransferWorker_ProgressChanged);
+            this.fileTransferWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.fileTransferWorker_RunWorkerCompleted);
             // 
             // FileMoverForm
             // 
@@ -613,9 +612,6 @@
             this.gbItemFilters.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupFilters)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.tlpMainWindow.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.gbEndDate.ResumeLayout(false);
@@ -623,6 +619,9 @@
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tlpMainWindow.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

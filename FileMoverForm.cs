@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -300,8 +301,8 @@ namespace Vista_File_Mover
         #endregion
 
         #region CopyFiles Method
-        private void copyFiles(IEnumerable<FileTransfer> transfers, DateTime startDate, DateTime endDate, BackgroundWorker worker, DoWorkEventArgs e)
-        {  
+        private void copyFiles(IEnumerable<FileTransfer> transfers, DateTime startDate, DateTime endDate, bool groupByDate, BackgroundWorker worker, DoWorkEventArgs e)
+        {
             //Loop through file transfers
             foreach (FileTransfer transfer in transfers)
             {
@@ -314,76 +315,89 @@ namespace Vista_File_Mover
 
                 worker.ReportProgress(0, transfer.transferName + ": Transfer Started");
 
+                DirectoryInfo sourceDirectory = new DirectoryInfo(transfer.source);
+                DirectoryInfo destinationDirectory = new DirectoryInfo(transfer.destination);
+
                 //Check that source and destination exist
-                if (!Directory.Exists(transfer.source))
+                if (!sourceDirectory.Exists)
                 {
                     worker.ReportProgress(0, transfer.transferName + ": Unable to access source directory!");
                     continue;
                 }
-                if (!Directory.Exists(transfer.destination))
+                if (!destinationDirectory.Exists)
                 {
                     worker.ReportProgress(0, transfer.transferName + ": Unable to access destination directory!");
                     continue;
                 }
 
                 //Loop through files in the source directory of the current transfer
-                IEnumerable<String> fileList = Directory.EnumerateFiles(transfer.source, "*", SearchOption.AllDirectories);
-                int fileCount = fileList.Count();
+                IEnumerable<String> fileList = sourceDirectory.EnumerateFiles("*", SearchOption.AllDirectories)
+                                                                .Where(x => x.LastWriteTime.Date >= startDate.Date && x.LastWriteTime.Date <= endDate.Date)
+                                                                .Select(f => f.FullName);
+
+                //int fileCount = fileList.Count();
+                int fileCount = 999;
                 int filesChecked = 0;
+
                 foreach (String file in fileList)
                 {
                     //Check for cancellation
-                    if (worker.CancellationPending) 
+                    if (worker.CancellationPending)
                     {
                         e.Cancel = true;
                         return;
                     }
-                    
+
                     //Generate a range of DateTime dates between startDate and endDate
                     IEnumerable<DateTime> dateRange = getDateRange(startDate, endDate);
-                    
+
                     //Get date of current file
                     DateTime currentDate = File.GetLastWriteTime(file).Date;
 
-                    //If file date is within the date range then apply filters
-                    if (dateRange.Contains(currentDate))
+                    string filename = Path.GetFileName(file);
+
+                    //Apply all copy filters
+                    Boolean passFilter = true;
+                    foreach (Filter filter in transfer.copyFilters)
                     {
-                        string filename = Path.GetFileName(file);
+                        if (!filter.apply(filename))
+                            passFilter = false;
+                    }
 
-                        //Apply filters
-                        Boolean passFilter = true;
-                        foreach (Filter filter in transfer.copyFilters)
-                        {
-                            if (!filter.apply(filename))
-                                passFilter = false;
-                        }
-
-                        //If all filters passed then copy into date and/or group folder
-                        if (passFilter)
+                    //If copy filters passed then copy into date and/or group folder
+                    if (passFilter)
+                    {
+                        string currentDatePath;
+                        if (groupByDate)
                         {
                             string currentDateString = currentDate.ToString("yyyy-MM-dd");
-                            string currentDatePath = transfer.destination + "\\" + currentDateString;
-                            Boolean copied = false;
-                            //Apply group filters, copy into group folder if passed group filter
-                            foreach (Filter filter in transfer.groupFilters)
+                            currentDatePath = transfer.destination + "\\" + currentDateString;
+                        }
+                        else
+                        {
+                            currentDatePath = transfer.destination;
+                        }
+                        Boolean copied = false;
+                        //Apply group filters, copy into group folder if passed group filter
+                        foreach (Filter filter in transfer.groupFilters)
+                        {
+                            if (filter.apply(filename))
                             {
-                                if (filter.apply(filename))
-                                {
-                                    string filterPath = currentDatePath + "\\" + filter.filterKey;
-                                    Directory.CreateDirectory(filterPath);
-                                    if (!File.Exists(filterPath + "\\" + filename))
-                                        File.Copy(file, filterPath + "\\" + filename);
-                                    copied = true;
-                                }
+                                string filterPath = currentDatePath + "\\" + filter.filterKey;
+                                Directory.CreateDirectory(filterPath);
+                                if (!File.Exists(filterPath + "\\" + filename))
+                                    File.Copy(file, filterPath + "\\" + filename);
+                                copied = true;
                             }
+                        }
 
-                            //If file not copied to a group folder copy to the general date folder
-                            if (!copied)
-                            {
-                                Directory.CreateDirectory(currentDatePath);
-                                if(!File.Exists(currentDatePath + "\\" + filename))
-                                    File.Copy(file, currentDatePath + "\\" + filename);
-                            }
+                        //If file not copied to a group folder copy to the general date folder
+                        if (!copied)
+                        {
+                            Directory.CreateDirectory(currentDatePath);
+                            if (!File.Exists(currentDatePath + "\\" + filename))
+                                worker.ReportProgress(0, "Copying: " + file + " to: " + currentDatePath + "\\" + filename);
+                                File.Copy(file, currentDatePath + "\\" + filename);
                         }
                     }
                     worker.ReportProgress(++filesChecked * 100 / fileCount);
@@ -446,7 +460,7 @@ namespace Vista_File_Mover
             worker.ReportProgress(0, "Starting File Transfers...");
 
             //Start file transfer
-            copyFiles(asyncTransfers, startDate, endDate, worker, e);
+            copyFiles(asyncTransfers, startDate, endDate, cbGroupByDate.Checked, worker, e);
         }
 
         private void fileTransferWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -461,6 +475,8 @@ namespace Vista_File_Mover
             gbEndDate.Enabled = true;
             newToolStripMenuItem.Enabled = true;
             openToolStripMenuItem.Enabled = true;
+
+            pbFileTransfer.Value = 100;
 
             //Check results
             if (e.Cancelled)
@@ -539,7 +555,7 @@ namespace Vista_File_Mover
             transferContextMenuStrip.Items[0].Enabled = false;
             transferContextMenuStrip.Items[1].Enabled = false;
 
-            if(selectedTransfer != null)
+            if (selectedTransfer != null)
                 transferContextMenuStrip.Items[0].Enabled = true;
 
             if (copiedTransfer != null)
@@ -549,7 +565,7 @@ namespace Vista_File_Mover
 
         #region Form Key Events
         private void FileMoverForm_KeyDown(object sender, KeyEventArgs e)
-        { 
+        {
             //Check for Ctrl+C
             if (e.Control && e.KeyCode == Keys.C)
             {
@@ -565,32 +581,5 @@ namespace Vista_File_Mover
             }
         }
         #endregion
-
-        bool dgvMouseDown;
-
-        private void dgvFileTransfers_MouseDown(object sender, MouseEventArgs e)
-        {
-            dgvMouseDown = (e.Button == MouseButtons.Left);
-        }
-
-        private void dgvFileTransfers_MouseUp(object sender, MouseEventArgs e)
-        {
-            DataGridView dgv = (DataGridView)sender;
-
-            if (e.Button == MouseButtons.Left && dgvMouseDown)
-            {
-                dgvMouseDown = false;
-
-                int rowIndex = dgv.HitTest(e.X, e.Y).RowIndex;
-                fileTransfers.IndexOf(selectedTransfer);
-                fileTransfers.Remove(selectedTransfer);
-                fileTransfers.Insert(rowIndex, selectedTransfer);
-            }
-        }
-
-        private void dgvFileTransfers_DragOver(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Move;
-        }
     }
 }
