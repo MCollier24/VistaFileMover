@@ -37,6 +37,11 @@ namespace Vista_File_Mover
                 return false;
             }
         }
+
+        public Filter Clone()
+        {
+            return (Filter) this.MemberwiseClone();
+        }
     }
     #endregion
 
@@ -71,6 +76,22 @@ namespace Vista_File_Mover
         {
             this.transferName = name;
             this.transferEnabled = enabled;
+        }
+
+        public FileTransfer Clone()
+        {
+            FileTransfer clonedTransfer = new FileTransfer(this.transferName, this.transferEnabled);
+
+            clonedTransfer.source = this.source;
+            clonedTransfer.destination = this.destination;
+
+            foreach (Filter f in this.groupFilters)
+                clonedTransfer.groupFilters.Add(f);
+
+            foreach(Filter f in this.copyFilters)
+                clonedTransfer.copyFilters.Add(f);
+
+            return clonedTransfer;
         }
     }
     #endregion

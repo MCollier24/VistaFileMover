@@ -73,6 +73,7 @@
             this.openTransferFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveTransferFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.fileTransferWorker = new System.ComponentModel.BackgroundWorker();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.applicationMenuStrip.SuspendLayout();
             this.gbFileTransfers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFileTransfers)).BeginInit();
@@ -223,6 +224,7 @@
             // 
             this.pbFileTransfer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbFileTransfer.Location = new System.Drawing.Point(0, 0);
+            this.pbFileTransfer.MarqueeAnimationSpeed = 40;
             this.pbFileTransfer.Name = "pbFileTransfer";
             this.pbFileTransfer.Size = new System.Drawing.Size(697, 37);
             this.pbFileTransfer.Step = 1;
@@ -577,6 +579,11 @@
             this.fileTransferWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.fileTransferWorker_ProgressChanged);
             this.fileTransferWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.fileTransferWorker_RunWorkerCompleted);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // FileMoverForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -673,6 +680,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.CheckBox cbGroupByDate;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

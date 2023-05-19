@@ -1,1 +1,487 @@
-[]
+[
+  {
+    "transferName": "EB040CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.46\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB040CAM1\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB300CAM1-CAM1",
+    "transferEnabled": true,
+    "source": "\\\\120.13.167.98\\SavedImages\\",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB300CAM1\\CAM1\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "CAM1-CAM1"
+      }
+    ]
+  },
+  {
+    "transferName": "EB300CAM1-CAM2",
+    "transferEnabled": true,
+    "source": "\\\\120.13.167.98\\SavedImages\\",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB300CAM1\\CAM2\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "CAM1-CAM2"
+      }
+    ]
+  },
+  {
+    "transferName": "EB300CAM2",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.114\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB300CAM2\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB330CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.97\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB330CAM1\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB346CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.118\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB346CAM1\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB349CAM1-CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.115\\SavedImages\\",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB349CAM1\\CAM1",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "CAM1-CAM1"
+      }
+    ]
+  },
+  {
+    "transferName": "EB349CAM1-CAM2",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.115\\SavedImages\\",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB349CAM1\\CAM2\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "CAM1-CAM2"
+      }
+    ]
+  },
+  {
+    "transferName": "EB349CAM2",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.105\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB349CAM2\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ]
+  },
+  {
+    "transferName": "EB358CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.108\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB358CAM1\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB358CAM2",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.109\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB358CAM2\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB410CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.84\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB410CAM1\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB420CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.81\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB420CAM1\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB440CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.82\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB440CAM1\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB460CAM1",
+    "transferEnabled": true,
+    "source": "\\\\120.13.167.90\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB460CAM1\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB460CAM2",
+    "transferEnabled": true,
+    "source": "\\\\120.13.167.91\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB460CAM2\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB460CAM3",
+    "transferEnabled": true,
+    "source": "\\\\120.13.167.92\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB460CAM3\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB460CAM4",
+    "transferEnabled": true,
+    "source": "\\\\120.13.167.93\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB460CAM4\\",
+    "groupFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Pass"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      }
+    ],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB460CAM5",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.95\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB460CAM5\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB470CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.83\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB470CAM1\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  },
+  {
+    "transferName": "EB500CAM1",
+    "transferEnabled": false,
+    "source": "\\\\120.13.167.96\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
+    "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB500CAM1\\",
+    "groupFilters": [],
+    "copyFilters": [
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Contains",
+        "filterKey": "Fail"
+      },
+      {
+        "filterSource": "Filename",
+        "filterStyle": "Not Contains",
+        "filterKey": "HMIImage"
+      }
+    ]
+  }
+]

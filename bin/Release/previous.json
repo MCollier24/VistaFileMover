@@ -20,7 +20,7 @@
   },
   {
     "transferName": "EB300CAM1-CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.98\\SavedImages\\",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB300CAM1\\CAM1\\",
     "groupFilters": [
@@ -50,7 +50,7 @@
   },
   {
     "transferName": "EB300CAM1-CAM2",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.98\\SavedImages\\",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB300CAM1\\CAM2\\",
     "groupFilters": [
@@ -80,7 +80,7 @@
   },
   {
     "transferName": "EB300CAM2",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.114\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB300CAM2\\",
     "groupFilters": [
@@ -143,7 +143,7 @@
   },
   {
     "transferName": "EB349CAM1-CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.115\\SavedImages\\",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB349CAM1\\CAM1",
     "groupFilters": [
@@ -173,7 +173,7 @@
   },
   {
     "transferName": "EB349CAM1-CAM2",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.115\\SavedImages\\",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB349CAM1\\CAM2\\",
     "groupFilters": [
@@ -279,7 +279,7 @@
   },
   {
     "transferName": "EB420CAM1",
-    "transferEnabled": true,
+    "transferEnabled": false,
     "source": "\\\\120.13.167.81\\mtxuser\\Documents\\Matrox Design Assistant\\SavedImages",
     "destination": "C:\\Users\\MatthewCollier\\Desktop\\8416-22 ATS Automation OH\\Unsynced\\Images\\Captured Images\\Stacker B02\\EB420CAM1\\",
     "groupFilters": [

@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Vista File Mover.exe.manifest" size="11007">
+    <dependentAssembly dependencyType="install" codebase="Vista File Mover.exe.manifest" size="11075">
       <assemblyIdentity name="Vista File Mover.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XgBcsmmZXY4/V1xDdD2YqDhqODGsH3N+mnLSU4GSyO4=</dsig:DigestValue>
+        <dsig:DigestValue>fzGV1qsdaFyjCqG4pIbCNWk5bfTsgB8CsJDnw9LVUrw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
